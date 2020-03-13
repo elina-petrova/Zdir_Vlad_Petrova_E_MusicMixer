@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
 	<title>AudioPlay</title>
 </head>
 <body>
-	<div id="mainContainer">
-		<section id="instrument-container">
-			<h2> Audioplay </h2>
-			<div class="drums"></div>
+	
+	<div id="main_container">
 
-			<div class="bass"></div>
+
+	<section class="button_holders left">
+		<h2> Drums </h2>
+		<div class="button hiphop">  </div>
+		<div class="button rock"> </div>
+		<div class="button electro">  </div>
+		<div class="button funky">  </div>
+			</section>
+
+
+	<div id="main_playing_container">
+		<h2> Audioplay </h2>
+		<section id="instrument-container">
+			<div class="drums drop_zone"></div>
+
+			<div class="base drop_zone"></div>
 		</section>
 
-		<section id="piano">
+		<section id="piano" class="keys">
+			<ul>
+				<li class="white key" data-key="90"><p>z</p></li>
+				<li class="black key" data-key="83"><p>s</p></li>
+				<li class="white key" data-key="88"><p>x</p></li>
+				<li class="black key" data-key="68"><p>d</p></li>
+				<li class="white key" data-key="67"><p>c</p></li>
+				<li class="white key" data-key="86"><p>v</p></li>
+				<li class="black key" data-key="71"><p>g</p></li>
+				<li class="white key" data-key="66"><p>b</p></li>
+				<li class="black key" data-key="72"><p>h</p></li>
+				<li class="white key" data-key="78"><p>n</p></li>
+			</ul>
 		</section>
 	</div>
 
-<script type="text/javascript" src="js/main.js"></script>
+	<section class="button_holders right">
+		<h2> Base </h2>
+		<div class="button hiphop">  </div>
+		<div class="button rock"> </div>
+		<div class="button electro">  </div>
+		<div class="button funky">  </div>
+
+			</section>
+
+
+</div>
+
+
+
+
+<script src="js/main.js"></script>
 </body>
 </html>
