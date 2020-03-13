@@ -12,8 +12,6 @@ body{
 	background-color: #111;
 }
 
-}
-
 
 .button_holders{
 	font-family: Kunstler;
@@ -21,12 +19,29 @@ body{
 	position: relative;
 	margin-left: 60px;
 	margin-right: 60px;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	
-}
+} 
 .button{
 	width: 100px;
 	height: 40px;
 	position: relative;
+}
+.button.hiphop:hover img{
+	box-shadow: 0px 0px 10px 5px #6897ff;
+}
+.button.rock:hover img{
+	box-shadow: 0px 0px 10px 5px #d82121;
+}
+.button.electro:hover img{
+	box-shadow: 0px 0px 10px 5px #cd0fe4;
+}
+.button.funky:hover img{
+	box-shadow: 0px 0px 10px 5px #ffc749;
 }
 
 .drop_zone{
