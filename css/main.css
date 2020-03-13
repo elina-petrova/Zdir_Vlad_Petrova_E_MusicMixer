@@ -92,7 +92,28 @@ body{
     background-color: #222;
  
 }
+#main_playing_container:before{
+	content: '';
+	background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
 
+	position: absolute;
+	top: -6px;
+	left: -6px;
+	-webkit-background-size: 1200%;
+	background-size: 1200%;
+	z-index: -1;
+	filter: blur(10px);
+	width: 102%;
+	height: 102%; 
+	border-radius: 20px;
+	animation: rainbow 20s ease-in-out infinite;
+}
+
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
 #instrument-container{
 	position: relative;
 	display: flex;
