@@ -1,52 +1,176 @@
-
 @font-face{
 	font-family: Kunstler;
 	src: url(../assets/fonts/KUNSTLER.TTF);
 
 }
+@font-face{
+	font-family: Packard;
+	src: url(../assets/fonts/packard-clipper-nf.regular.ttf);
+
+}
 body{
-	background-color: #333;
+	background-color: #111;
 }
 
-#mainContainer{
-	padding: 100px;
+}
+
+
+.button_holders{
+	font-family: Kunstler;
+	font-size: 2vw;
+	position: relative;
+	margin-left: 60px;
+	margin-right: 60px;
+	
+}
+.button{
+	width: 100px;
+	height: 40px;
+	position: relative;
+}
+
+.drop_zone{
+	width: 70%;
+	height: 20%;
 	margin: 0 auto;
-	height: 710px;
-	width: 590px;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+#main_container{
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+	width: 60vw;
+	height: 100vh;
+	color: white;
+	position: relative;
+}
+.button_holders{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+#main_playing_container h2{
+	font-family: Kunstler;
+	font-size: 4vw;
+	text-align: center;
+	margin-bottom: 50px;
+}
+#main_playing_container{
+	position: relative;
+	padding: 40px;
+	height: 70vh;
+	width: 25vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	border-radius: 20px;
+    background-color: #222;
+ 
 }
 
 #instrument-container{
 	position: relative;
-	width: 583px;
-	height: 359px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: flex-end;
-	background-color: #222;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	height: 30%;
+	width: 100%;
 }
 
 #instrument-container h2{
 	position: absolute;
-	top: -60px;
+	top: 0px;
 	font-family: Kunstler;
 	color: white;
-	font-size: 80px;
+	font-size: 4vw;
 	font-weight: 100;
 }
 
-.drums, .bass{
-	width: 220px;
-	height: 220px;
+.drums, .base{
+	width: 40%;
+	height: 100%;
 	background-color: #E5E1E1;
 	margin-bottom: 30px;
 }
 
 #piano{
-	width: 583px;
-	height: 247.5px;
-	background-color: #E5E1E1;
+	position: relative;
+	width: 100%;
+	height: 50%;
+	margin: 0 auto;
+}
+#piano ul{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	
+	width: 100%;
+	height: 100%;
+}
+#piano li{
+	position: relative;
+	list-style: none;
+}
+p{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+	font-size: 1.4vw;
+	text-transform: uppercase;
+	text-shadow: 0px 2px 2px rgba(0,0,0,0.6);
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+#piano ul li.white p{
+	position: absolute;
+	left: 43%;
+	bottom: 20px;
+	color: #333;
+}
+#piano ul li.black p{
+	position: absolute;
+	left: 20%;
+	bottom: 20px;
+	color: #efefefef;
+}
+.white{
+	height: 100%;
+	width: 6vw;
+	border-bottom: 1px solid #bbb;
+	border-radius: 0 0 7px 7px;
+	box-shadow: 0px 0px 4px 1px rgba(247, 247, 247, 0.6) inset, 0 0 11px #e2e2e2 inset, 0px 2px 4px 0px rgba(33, 33, 33, 0.61);
+	background: linear-gradient(#dedddd 0%,#fdfafa 50%);
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.black {
+  height: 50%;
+  width: 3vw;
+  margin: 0 -1.1vw 0 -1.1vw;
+  z-index:2;
+  border:1px solid #000;
+  border-radius:0 0 3px 3px;
+  box-shadow: -6px -1px 3px 0px rgba(255, 255, 255, 0.21) inset, 0px -6px 1px 2px rgba(4, 4, 4, 0.5) inset;
+  background: linear-gradient(#171717 0%,#3e3d3d 100%);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
 }
