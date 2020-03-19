@@ -12,6 +12,45 @@ body{
 	background-color: #111;
 }
 
+img{
+	width: auto;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: 'Roboto', serif;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 500ms, font-size 500ms;
+}
+
+.startGame{
+	font-family: 'Roboto', serif;
+	font-size: 20px;
+	color: black;
+	background-color: white;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+.startGame:hover{
+	color: gold;
+}
+.overlay.visible {
+  display: flex;
+/* animation: overlay-grow 500ms forwards; */
+}
+
 
 .button_holders{
 	font-family: Kunstler;
@@ -19,17 +58,16 @@ body{
 	position: relative;
 	margin-left: 60px;
 	margin-right: 60px;
-	width: 100%;
-	height: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
 	
-} 
+}
 .button{
 	width: 100px;
 	height: 40px;
 	position: relative;
+}
+.button.dragOver{
+	border: 1px dashed blue;
+	width: 98px;
 }
 .button.hiphop:hover img{
 	box-shadow: 0px 0px 10px 5px #6897ff;
@@ -43,7 +81,6 @@ body{
 .button.funky:hover img{
 	box-shadow: 0px 0px 10px 5px #ffc749;
 }
-
 .drop_zone{
 	width: 70%;
 	height: 20%;
@@ -83,14 +120,17 @@ body{
 #main_playing_container{
 	position: relative;
 	padding: 40px;
+	/*margin: 0px auto;*/
 	height: 70vh;
 	width: 25vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	border-radius: 20px;
+	/*box-shadow: 0px 0px 20px 0px black;*/
     background-color: #222;
- 
+    /*box-shadow: 0px 0px 13px 0px #ffffffc4 inset;*/
+    /*animation: changeColorInside 10s infinite;*/
 }
 #main_playing_container:before{
 	content: '';
@@ -114,6 +154,48 @@ body{
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
 }
+
+@keyframes changeColor{
+	0%{
+	 box-shadow: 0px 0px 20px 0px red;
+	}
+	20%{
+	 box-shadow: 0px 0px 20px 0px orange;
+	}
+	40%{
+	 box-shadow: 0px 0px 20px 0px yellow;
+	}
+	60%{
+	 box-shadow: 0px 0px 20px 0px green;
+	}
+	80%{
+	 box-shadow: 0px 0px 20px 0px lightblue;
+	}
+	100%{
+	 box-shadow: 0px 0px 20px 0px red;
+	}
+}
+@keyframes changeColorInside{
+	0%{
+	 box-shadow: 0px 0px 20px 0px red inset;
+	}
+	20%{
+	 box-shadow: 0px 0px 20px 0px orange inset;
+	}
+	40%{
+	 box-shadow: 0px 0px 20px 0px yellow inset;
+	}
+	60%{
+	 box-shadow: 0px 0px 20px 0px green inset;
+	}
+	80%{
+	 box-shadow: 0px 0px 20px 0px lightblue inset;
+	}
+	100%{
+	 box-shadow: 0px 0px 20px 0px red inset;
+	}
+}
+
 #instrument-container{
 	position: relative;
 	display: flex;
@@ -195,6 +277,10 @@ p{
 	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
+.active.white{
+  box-shadow: 0px 0px 20px rgba(6, 6, 6, 0.2) inset;
+  background: linear-gradient(to bottom,#e1e0e0 20%,#d6d5d5 100%);
+}
 .black {
   height: 50%;
   width: 3vw;
@@ -208,5 +294,15 @@ p{
   -o-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-
+}
+.active.black{
+box-shadow: -6px -1px 3px 0px rgba(255, 255, 255, 0.21) inset;
+background: linear-gradient(#171717 0%,#3e3d3d 100%);
+}
+.active p{
+-webkit-transform: translateY(5px);
+-o-transform: translateY(5px);
+-moz-transform: translateY(5px);
+transform: translateY(5px);
+text-shadow: 0px 2px 2px rgba(0,0,0,0.1);
 }
